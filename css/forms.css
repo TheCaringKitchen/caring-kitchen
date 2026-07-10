@@ -1,0 +1,122 @@
+/* Caring Kitchen 2026 */
+@charset "utf-8";
+
+/* -----------GRID for Forms & Search------------- */
+/* fieldset * {
+    outline: 1px solid rgba(255,0,0,0.2);
+} */
+
+fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "left right";
+    gap: 15px 1px;
+    padding: 2%;
+    margin: 1%;
+}
+
+/* Each row is a 2‑column layout */
+/* lets children participate in the fieldset grid */
+.row {
+    display: contents;
+}
+
+/* Right column: input + error stacked */
+.inputWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+/* forces all error spans to the right column */
+.error {
+    grid-column: 2 / 3;
+}
+
+/* -----------Legend------------------------- */
+form legend {
+    border-radius: 10px;
+    background-color: #8ba48f;
+    padding: 1%;
+}
+
+/* ---------Form label/input ---------------- */
+#form1 fieldset label {
+margin-left: 20%;
+}
+
+/* --------Form Submit & Reset 'buttons'----- */
+.submit {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-areas: left right; */
+}
+.round {
+    /* grid-area: right; */
+    padding: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 4%;
+}
+
+/* -----------FORMS------------------- */
+.round {
+    font-size: medium;
+}
+
+.inputWrap textarea {
+    width: 160%;
+    min-height: 180px;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/*--------------- CONTACT AREAS help by CoPilot AI --------------*/
+/* Force labels into column 1 */
+#form2 fieldset label {
+    grid-column: 1 !important;
+    justify-self: start !important;
+    float: none !important;
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+/* Force inputs into column 2 */
+#form2 fieldset .inputWrap {
+    grid-column: 2 !important;
+    justify-self: start !important;
+}
+
+#form2 fieldset input,
+#form2 fieldset textarea {
+    float: none !important;
+    margin: 0 !important;
+    text-align: left !important;
+}
+
+form {
+    background-color: #faebd0;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 2rem auto;
+    width: 90%;
+}
+
+fieldset {
+    margin-bottom: 2rem;
+}
+
+.row label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+/* -----------MAP---------------------- */
+iframe {
+    display: block;
+    margin: auto;
+    margin-bottom: 4%;
+}
+
+
+

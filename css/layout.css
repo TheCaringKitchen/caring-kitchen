@@ -1,0 +1,187 @@
+/* Caring Kitchen 2026 */
+@charset "utf-8";
+
+body {
+    width: 80%;
+    min-width: 780px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "logo list";
+}
+
+header img {
+    grid-area: logo;
+}
+
+header nav ul {
+    grid-area: list;
+}
+
+header nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 25%;
+    text-align: center;
+    padding-right: 18%;
+}
+
+h1,
+h2,
+h3,
+p {
+    line-height: 1.5;
+    padding: 2%;
+}
+
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+/* --------Quote Layout on Main Page ------- */
+.quote {
+    padding: 7%;
+    margin-bottom: 10%;
+}
+
+/* --------Quote & Food Card GRID Layout ------- */
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2%;
+    gap: 10px;
+}
+
+/* ---------Index & How-page Layouts-------- */
+.by3 {
+    padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2%;
+}
+
+.by3 img {
+    width: 100%;
+}
+
+.out-L {
+    padding-left: 3%;
+}
+
+.out-R {
+    padding-right: 3%;
+}
+
+/* ---------Why-page Layout----------- */
+.subH {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* place-items: center; */
+    justify-items: center;
+}
+
+.outside-L {
+    padding-left: 100%;
+}
+
+.outside-R {
+    padding-right: 100%;
+}
+
+/* -------------------Card Layout------------------ */
+.c2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%;
+    padding: 1%;
+}
+
+.card img {
+    margin: 3%;
+    width: 94%;
+    border: 1px solid #905c35;
+}
+
+/* ---------------Lone Images------------------ */
+.mid {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    padding-bottom: 2%;
+}
+
+/* ---------Arc page details----------- */
+.arc img,
+iframe {
+    display: block;
+    margin: auto;
+    padding-bottom: 2%;
+}
+
+/* --------------------VIDEO Layout-------------------- */
+video {
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+
+/* ----------------FOOD Page Dropdown -----------------*/
+.catDrop {
+    width: 26%;
+    margin: auto;
+}
+
+/*------ Sticky footer support from CoPilot AI -------*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/*--------- CoPilot AI's help with the FOOTER --------*/
+.site-footer {
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    /* IMPORTANT: prevents the gap */
+}
+
+.site-footer h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer ul li {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    text-align: center;
+}

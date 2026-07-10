@@ -1,0 +1,113 @@
+/* Caring Kitchen 2026*/
+@charset "utf-8";
+
+
+/*--------------- Colors ------------------ */
+html {
+    background-color: #c1946a;
+    color: #905c35
+}
+
+header {
+    background-color: #8ba48f;
+}
+
+header nav ul li a {
+    color: #faebd0;
+}
+
+.on {
+    text-shadow: 0 0 10px #ecb683;
+    text-decoration-line: underline;
+}
+
+main {
+    background-color: #faebd0;
+    color: #905c35;
+}
+
+.mainPage section a img {
+    border: 3px solid #905c35;
+}
+
+main a {
+    color: #8ba48f;
+}
+
+main a:hover {
+    color: #c1946a;
+}
+
+header nav ul a:hover,
+footer nav ul a:hover {
+    color: #905c35;
+}
+
+/*----------- Fonts and letter styles-------------- */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-align: justify;
+}
+
+header ul li a {
+    font-size: larger;
+}
+
+span {
+    font-style: italic;
+}
+
+legend {
+    font-weight: bold;
+
+}
+
+/* -------------- Card Styles ------------------ */
+.card,
+.quote {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 6px 12px 0 #8ba48f;
+    transition: 0.3s;
+}
+
+.quote {
+    background-color: #d4d0b6;
+}
+
+.quote q,
+h4,
+.SKU {
+    font-style: italic;
+}
+
+/* -----------Card Hover Shadow------ */
+.card:hover {
+    box-shadow: 0 16px 32px 0 black;
+}
+
+/* --------- CONTACT PAGE help by CopPilot AI ------ */
+
+legend {
+    background-color: #8ba48f;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #faebd0;
+    margin-bottom: 1rem;
+}
+
+/* ------- FOOTER help by CoPilot AI ---------*/
+.site-footer {
+    background-color: #8ba48f;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: #905c35;
+    /* font-weight: bold; */
+}
+
+footer {
+    background-color: #8ba48f;
+}
