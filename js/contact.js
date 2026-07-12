@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 // Caring Kitchen 2026
 //-------------------------------------------------------
 //GET THE HTMLs AS JS OBJECTS:
@@ -126,3 +127,4 @@ function ResetFormStyles() {
 formObj.addEventListener("submit", HandleSubmit);
 resetObj.addEventListener("click", ResetFormStyles);
 
+});
