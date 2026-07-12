@@ -50,13 +50,13 @@ function ValidateNames(fieldId) {
     }
 }
 
-function Change2phone() {
+function Change2email() {
     contactFieldObj.type = "email";
     contactFieldObj.placeholder = "you@gmail.com";
     contactLabelObject.innerHTML = "Email";
 }
 
-function Change2email() {
+function Change2phone() {
     contactFieldObj.type = "tel";
     contactFieldObj.placeholder = "2345678910";
     contactLabelObject.innerHTML = "Phone";
