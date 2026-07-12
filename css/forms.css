@@ -41,7 +41,7 @@ form legend {
 
 /* ---------Form label/input ---------------- */
 #form1 fieldset label {
-margin-left: 20%;
+    margin-left: 20%;
 }
 
 /* --------Form Submit & Reset 'buttons'----- */
@@ -50,12 +50,29 @@ margin-left: 20%;
     grid-template-columns: repeat(2, 1fr);
     /* grid-template-areas: left right; */
 }
+
 .round {
     /* grid-area: right; */
     padding: 1%;
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 4%;
+}
+
+/* ------------ Sent Success Message --------- */
+.success-message {
+    animation: fadeIn 0.6s ease-in-out;
+    background-color: #e6ffe6;
+    border: 2px solid #4CAF50;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* -----------FORMS------------------- */
@@ -97,7 +114,7 @@ form {
     background-color: #faebd0;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     margin: 2rem auto;
     width: 90%;
 }
@@ -117,6 +134,3 @@ iframe {
     margin: auto;
     margin-bottom: 4%;
 }
-
-
-

@@ -66,8 +66,8 @@ function Change2email() {
 //REGISTER FUNCTION TO EVENT
 //--------------------------------------------------------
 
-emailRadio.addEventListener("click", Change2phone);
-callRadio.addEventListener("click", Change2email);
+emailObj.addEventListener("click", Change2phone);
+callObj.addEventListener("click", Change2email);
 
 //--------------------------------------------------------
 //FINAL VALIDATION ON SUBMIT EVENT:
@@ -84,8 +84,11 @@ function HandleSubmit(event) {
 
     // If it's all valid, submit the form 
     if (fnameVal && lnameVal && msgVal) {
-        alert("Submission Successful");
-        formObj.submit();
+        // Show success message
+        const successBox = document.getElementById("formSuccess");
+        successBox.style.display = "block";
+         // Actually submit to Formspree
+        formObj.requestSubmit();
     } else { //Otherwise block and ask to correct
         alert("Please correct the highlighted fields.");
     }
@@ -113,6 +116,8 @@ function ResetFormStyles() {
 
     textInput.placeholder = "";
     textInput.style.border = "";
+
+    document.getElementById("formSuccess").style.display = "none";
 }
 
 //--------------------------------------------------------
