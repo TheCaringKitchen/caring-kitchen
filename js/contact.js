@@ -66,8 +66,8 @@ function Change2email() {
 //REGISTER FUNCTION TO EVENT
 //--------------------------------------------------------
 
-emailObj.addEventListener("click", Change2phone);
-callObj.addEventListener("click", Change2email);
+emailObj.addEventListener("click", Change2email);
+callObj.addEventListener("click", Change2phone);
 
 //--------------------------------------------------------
 //FINAL VALIDATION ON SUBMIT EVENT:
@@ -87,7 +87,7 @@ function HandleSubmit(event) {
         // Show success message
         const successBox = document.getElementById("formSuccess");
         successBox.style.display = "block";
-         // Actually submit to Formspree
+        // Actually submit to Formspree
         formObj.requestSubmit();
     } else { //Otherwise block and ask to correct
         alert("Please correct the highlighted fields.");
