@@ -75,22 +75,41 @@ callObj.addEventListener("click", Change2phone);
 //--------------------------------------------------------
 
 function HandleSubmit(event) {
-    event.preventDefault(); //stop auto submit
+    event.preventDefault(); // stop auto submit
 
-    //Internal variables for the validation  
+    // Internal variables for the validation  
     var fnameVal = ValidateNames("fName");
     var lnameVal = ValidateNames("lName");
     var msgVal = ValidateNames("msg");
 
-
     // If it's all valid, submit the form 
     if (fnameVal && lnameVal && msgVal) {
-        // Show success message
-        const successBox = document.getElementById("formSuccess");
-        successBox.style.display = "block";
-        // Actually submit to Formspree
-        formObj.requestSubmit();
-    } else { //Otherwise block and ask to correct
+
+        // Build FormData from the form
+        const formData = new FormData(formObj);
+
+        // Send to Formspree
+        fetch(formObj.action, {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show success message
+                const successBox = document.getElementById("formSuccess");
+                successBox.style.display = "block";
+                formObj.reset();
+            } else {
+                alert("There was an error sending your message.");
+            }
+        })
+        .catch(error => {
+            console.error("Formspree error:", error);
+            alert("There was an error sending your message.");
+        });
+
+    } else {
         alert("Please correct the highlighted fields.");
     }
 }
